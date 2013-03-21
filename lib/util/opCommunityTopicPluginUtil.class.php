@@ -8,7 +8,7 @@ class opCommunityTopicPluginUtil
 
     sfApplicationConfiguration::getActive()->loadHelpers(array('I18N'));
     $message = format_number_choice('[1]1 topic has new comments|(1,Inf]%1% topics have new comments', array('%1%'=>'1'), 1);
-if($Member->member_id != NULL){    
+if($Member->member_id != null){    
     opNotificationCenter::notify($fromMember, $toMember, $message, array('category'=>'other', 'url'=>$url, 'icon_url'=>null));
     }
   }
